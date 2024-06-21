@@ -6,6 +6,7 @@ contract Counter {
 
     function setNumber(uint256 newNumber) public {
         number = newNumber;
+	fakeVar = newNumber;
     }
 
     function increment() public {
