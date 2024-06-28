@@ -1,2 +1,6 @@
 [profile.default]
-solc_version = "0.8.0"
+src = "src"
+out = "new_out"
+libs = ["lib"]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
