@@ -45,3 +45,34 @@ contract Father is Inherited, GrandFather {
         setGrandFatherNumber(finalResult);
     }
 }
+
+contract Uncle {
+    // This is a completely separate root contract with its own data and logic
+    uint256 public uncleNumber;
+    // a mapping of adresses to uints
+    mapping(address => uint) public balances;
+
+    constructor(uint _uncleNumber) {
+        uncleNumber = _uncleNumber;
+    }
+
+    function setUncleNumber(uint256 _uncleNumber) public {
+        uncleNumber = _uncleNumber;
+    }
+
+    function getUncleNumber() public view returns (uint256) {
+        return uncleNumber;
+    }
+
+    function setBalance(address _address, uint _balance) public {
+        balances[_address] = _balance;
+    }
+
+    function getBalance(address _address) public view returns (uint) {
+        return balances[_address];
+    }
+
+    function getBalance() public view returns (uint) {
+        return balances[msg.sender];
+    }
+}
