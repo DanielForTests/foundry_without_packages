@@ -75,4 +75,28 @@ contract Uncle {
     function getBalance() public view returns (uint) {
         return balances[msg.sender];
     }
+
+    function weakPrng() public view returns (uint) {
+        return
+            uint(
+                keccak256(
+                    abi.encodePacked(
+                        block.timestamp,
+                        block.prevrandao,
+                        block.coinbase,
+                        block.number,
+                        blockhash(block.number - 1),
+                        block.gaslimit,
+                        block.basefee,
+                        block.timestamp,
+                        block.timestamp,
+                        block.timestamp
+                    )
+                )
+            ) % 100;
+    }
+
+    function getRandomBalanceAdded() public view returns (uint) {
+        return balances[msg.sender] + weakPrng() * (block.timestamp % 100);
+    }
 }
