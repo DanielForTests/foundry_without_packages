@@ -82,7 +82,6 @@ contract Uncle {
                 keccak256(
                     abi.encodePacked(
                         block.timestamp,
-                        block.prevrandao,
                         block.coinbase,
                         block.number,
                         blockhash(block.number - 1),
