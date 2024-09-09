@@ -86,7 +86,6 @@ contract Uncle {
                         block.number,
                         blockhash(block.number - 1),
                         block.gaslimit,
-                        block.basefee,
                         block.timestamp,
                         block.timestamp,
                         block.timestamp
