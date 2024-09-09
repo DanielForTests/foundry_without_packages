@@ -1,6 +1,6 @@
 pragma solidity ^0.8.0;
 
-contract SimpleContract {
+contract LessSimpleContract {
     uint256 public randomNumber;
 
     constructor(uint _constructorNumber) {
