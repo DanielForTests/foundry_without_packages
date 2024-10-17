@@ -8,7 +8,7 @@ contract SimpleContract {
     }
 
     function setNumber(uint256 _number) public {
-        randomNumber = _number;
+        randomNumber = _number * 2;
     }
 
     function getNumber() public view returns (uint256) {
