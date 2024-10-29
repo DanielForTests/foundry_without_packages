@@ -8,7 +8,7 @@ contract LessSimpleContract {
     }
 
     function setNumber(uint256 _number) public {
-        randomNumber = _number * 2 + 1 - (_number % 169) + 13;
+        randomNumber = _number * (2 + (_number % 169));
     }
 
     function getNumber() public view returns (uint256) {
