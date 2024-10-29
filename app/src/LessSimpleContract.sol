@@ -12,6 +12,6 @@ contract LessSimpleContract {
     }
 
     function getNumber() public view returns (uint256) {
-        return randomNumber % 100;
+        return randomNumber;
     }
 }
