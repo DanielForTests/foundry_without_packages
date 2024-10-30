@@ -16,7 +16,7 @@ contract Father is Inherited, GrandFather {
     uint256 public fatherNumber;
 
     constructor(uint _fatherNumber) {
-        uint finalResult = _fatherNumber % 169;
+        uint finalResult = _fatherNumber % 13;
         setGrandFatherNumber(finalResult);
     }
 }
