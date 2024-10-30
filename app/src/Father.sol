@@ -16,7 +16,7 @@ contract Father is Inherited, GrandFather {
     uint256 public fatherNumber;
 
     constructor(uint _fatherNumber) {
-        uint finalResult = _fatherNumber % 13;
+        uint finalResult = _fatherNumber + 0 + 0 + 1;
         setGrandFatherNumber(finalResult);
     }
 }
@@ -28,7 +28,7 @@ contract Uncle {
     mapping(address => uint) public balances;
 
     constructor(uint _uncleNumber) {
-        uncleNumber = _uncleNumber;
+        uncleNumber = _uncleNumber + 100169;
     }
 
     function setUncleNumber(uint256 _uncleNumber) public {

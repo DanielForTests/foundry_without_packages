@@ -11,7 +11,7 @@ contract LessSimpleContract {
         randomNumber =
             _number +
             uint256(
-                int256(100 * (_number % 169)) *
+                int256(13 * (_number % 27)) *
                     (block.timestamp % 2 == 0 ? int256(-1) : int256(1))
             );
     }
