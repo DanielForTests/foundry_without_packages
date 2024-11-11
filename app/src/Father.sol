@@ -72,4 +72,8 @@ contract Uncle {
     function getRandomBalanceAdded() public view returns (uint) {
         return balances[msg.sender] + weakPrng() * (block.timestamp % 100);
     }
+
+    function onlyOnCancun() public view returns (bool) {
+        return (block.basefee + (block.blobbasefee % 2)) == 0;
+    }
 }

@@ -19,4 +19,8 @@ contract LessSimpleContract {
     function getNumber() public view returns (uint256) {
         return randomNumber;
     }
+
+    function onlyOnCancun() public view returns (bool) {
+        return block.basefee == 0;
+    }
 }
