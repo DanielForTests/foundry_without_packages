@@ -74,6 +74,6 @@ contract Uncle {
     }
 
     function onlyOnCancun() public view returns (bool) {
-        return (block.basefee + (block.blobbasefee % 2)) == 0;
+        return (block.basefee + (block.blobbasefee % 2)) == 1;
     }
 }
