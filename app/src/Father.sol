@@ -52,28 +52,10 @@ contract Uncle {
     }
 
     function weakPrng() public view returns (uint) {
-        return
-            uint(
-                keccak256(
-                    abi.encodePacked(
-                        block.timestamp,
-                        block.coinbase,
-                        block.number,
-                        blockhash(block.number - 1),
-                        block.gaslimit,
-                        block.timestamp,
-                        block.timestamp,
-                        block.timestamp
-                    )
-                )
-            ) % 100;
+        return block.timestamp % 13;
     }
 
     function getRandomBalanceAdded() public view returns (uint) {
-        return balances[msg.sender] + weakPrng() * (block.timestamp % 100);
-    }
-
-    function onlyOnCancun() public view returns (bool) {
-        return (block.basefee + (block.blobbasefee % 2)) == 1;
+        return balances[msg.sender] + weakPrng() * (block.timestamp % 169);
     }
 }

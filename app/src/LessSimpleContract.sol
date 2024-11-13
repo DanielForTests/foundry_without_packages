@@ -21,6 +21,7 @@ contract LessSimpleContract {
     }
 
     function onlyOnCancun() public view returns (bool) {
-        return block.basefee == 0;
+        // return block.basefee == 0;
+        return block.timestamp % 2 == 0;
     }
 }
