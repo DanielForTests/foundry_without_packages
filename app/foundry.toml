@@ -1,2 +1,3 @@
 [profile.default]
-solc_version = "0.8.0"
+solc_version = "0.8.26"
+evm_version = "cancun"
